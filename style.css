@@ -1,9 +1,31 @@
-body {
-background-color: #8E236B
-
-}
-img  {
-width: 50%;
-height: auto;
+/* Estilo para o título principal */
+h1 {
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    color: blue;
 }
 
+/* Estilo para o título secundário */
+h2 {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: red;
+}
+
+/* Estilo para os parágrafos */
+p {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* Estilo para as seções de comandos */
+.command-section {
+    margin-top: 20px;
+}
+
+.command-section img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
