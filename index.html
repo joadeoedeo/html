@@ -3,26 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos HTML e CSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Atividades</title>
+    <style>
+        /* CSS do 1º Trimestre */
+        body {
+            background-color: blue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* CSS do 2º Trimestre */
+        h1,
+        h2 {
+            border: 5px solid;
+            border-image: linear-gradient(to right, red, yellow) 1;
+            padding: 10px;
+        }
+
+        /* CSS do 3º Trimestre */
+        .pergunta {
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .resposta {
+            display: none;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- HTML do 1º Trimestre -->
+    <h1>Bem-vindo ao Meu Site</h1>
+    <p>Este site foi criado como parte de um exercício de HTML e CSS.</p>
+    <img src="https://via.placeholder.com/150" alt="Imagem Exemplo">
+    <a href="https://www.google.com" target="_blank">Visite o Google</a>
 
-    <h1>Título Principal: Introdução aos Comandos HTML e CSS</h1>
+    <!-- HTML do 2º Trimestre -->
+    <h2>Seção com Moldura e Degradê</h2>
+    <p>Os títulos deste site possuem molduras com um degradê de duas cores.</p>
 
-    <h2>Título Secundário: Explicação dos Comandos</h2>
+    <!-- HTML do 3º Trimestre -->
+    <h2>Perguntas Frequentes</h2>
+    <div>
+        <p class="pergunta" onclick="toggleResposta('resposta1')">O que é HTML?</p>
+        <p id="resposta1" class="resposta">HTML é a linguagem de marcação usada para criar páginas da web.</p>
 
-    <div class="command-section">
-        <h3>Comando HTML</h3>
-        <p>O comando HTML é a base de qualquer site na web. Ele define a estrutura do conteúdo, incluindo textos, imagens, links e muito mais.</p>
-        <img src="html-example.png" alt="Exemplo de comando HTML">
+        <p class="pergunta" onclick="toggleResposta('resposta2')">O que é CSS?</p>
+        <p id="resposta2" class="resposta">CSS é a linguagem de estilo usada para definir a aparência das páginas da web.</p>
     </div>
 
-    <div class="command-section">
-        <h3>Comando CSS</h3>
-        <p>O comando CSS é usado para estilizar o conteúdo definido pelo HTML. Com o CSS, você pode controlar cores, fontes, layouts e muito mais.</p>
-        <img src="css-example.png" alt="Exemplo de comando CSS">
-    </div>
-
+    <script>
+        function toggleResposta(id) {
+            const resposta = document.getElementById(id);
+            if (resposta.style.display === 'none' || resposta.style.display === '') {
+                resposta.style.display = 'block';
+            } else {
+                resposta.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
